@@ -4,7 +4,7 @@ Webanwendung zur Verwaltung von Produkten in mehreren Lagern. Ein- und Ausgangsr
 
 ![Dashboard](docs/screenshots/dashboard.png)
 
-**Live-Demo:** [your-app.vercel.app](https://inventory-1jl4qfkl7-bjornx007s-projects.vercel.app/login) · **Demo-Login usernam:** `demo` /Password: `demo1234`
+**Live-Demo:** [Inventory Web App](https://inventory-1jl4qfkl7-bjornx007s-projects.vercel.app/login) · **Demo-Login Username:** `demo` /Password: `demo1234`
 
 ---
 
