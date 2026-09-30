@@ -2,7 +2,7 @@
 
 Webanwendung zur Verwaltung von Produkten in mehreren Lagern. Ein- und Ausgangsrechnungen ändern den Bestand automatisch, jedes Produkt hat einen eigenen QR-Code, und jede Bestandsbewegung wird mit Vorher-/Nachher-Stand und verantwortlichem Nutzer protokolliert.
 
-![Dashboard](docs/screenshots/dashboard.png)
+
 
 **Live-Demo:** [Inventory Web App](https://inventory-1jl4qfkl7-bjornx007s-projects.vercel.app/login) · **Demo-Login Username:** `demo` /Password: `demo1234`
 
