@@ -4,7 +4,7 @@ Webanwendung zur Verwaltung von Produkten in mehreren Lagern. Ein- und Ausgangsr
 
 ![Dashboard](docs/screenshots/dashboard.png)
 
-**Live-Demo:** [your-app.vercel.app](https://your-app.vercel.app) · **Demo-Login:** `demo@example.com` / `demo1234`
+**Live-Demo:** [your-app.vercel.app](https://your-app.vercel.app) · **Demo-Login usernam:** `demo` /Password: `demo1234`
 
 ---
 
@@ -78,31 +78,7 @@ Typischer Ablauf: Ware kommt an → Admin erfasst Eingangsrechnung am PC → Lag
 
 ---
 
-## Installation
 
-Voraussetzungen: Node.js 18+ und eine PostgreSQL-Datenbank (z. B. kostenloses [Neon](https://neon.tech)-Projekt).
-
-```bash
-git clone https://github.com/<dein-name>/<repo>.git
-cd <repo>
-npm install
-cp .env.example .env
-```
-
-`.env` ausfüllen:
-
-```env
-DATABASE_URL=postgresql://user:passwort@host/db
-AUTH_SECRET=lange-zufaellige-zeichenfolge
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-```
-
-```bash
-npm run db:migrate
-npm run dev
-```
-
----
 
 ## Excel-Import
 
@@ -118,8 +94,4 @@ npm run dev
 - [ ] Rechnungen als PDF exportieren
 - [ ] Barcode-Scan direkt in der App-Oberfläche
 
----
 
-## Autor
-
-**Dein Name** · [LinkedIn](https://linkedin.com/in/dein-profil) · [Portfolio](https://deine-seite.de)
