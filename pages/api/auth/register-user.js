@@ -1,9 +1,13 @@
+import dbConnect from "../../../lib/mongoose";
+import User from "../../../models/User";
 import { useInviteToken } from "../../../lib/auth/inviteTokenManager";
-import db from "../../../lib/db";
 
 export default async function handler(req, res) {
-  if (req.method !== "POST")
+  if (req.method !== "POST") {
     return res.status(405).json({ success: false });
+  }
+
+  await dbConnect();
 
   const { username, password, role, token } = req.body;
 
@@ -19,27 +23,29 @@ export default async function handler(req, res) {
   // If registration from TOKEN
   if (token) {
     const info = useInviteToken(token);
-    if (!info)
+
+    if (!info) {
       return res.json({
         success: false,
         message: "Invalid or used invite",
       });
+    }
 
     finalRole = info.role;
   }
 
-  if (!finalRole)
+  if (!finalRole) {
     return res.json({
       success: false,
       message: "Missing role",
     });
+  }
 
- const newUser = await db.user.create({
-  username: username.trim(),        // ✅ keep original casing
-  password: String(password),       // password is case-sensitive
-  role: finalRole,
-});
-
+  const newUser = await User.create({
+    username: username.trim(),
+    password: String(password),
+    role: finalRole,
+  });
 
   return res.json({
     success: true,
